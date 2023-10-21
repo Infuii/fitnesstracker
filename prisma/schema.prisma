@@ -64,3 +64,10 @@ model VerificationToken {
 
     @@unique([identifier, token])
 }
+model WeightRecord {
+  id     Int      @id @default(autoincrement())
+  userId String
+  date   DateTime @default(now())
+  weight Float
+}
+
